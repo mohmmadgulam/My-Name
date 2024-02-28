@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Mohammad Saiyad</h1>
+    <h1>Saiyad</h1>
+    <script>
+        // array function
+
+        // let car=['kia','hundai','alto','tesla','thar','fortuner','farrari','lamberghini','amaze','audi'];
+        // console.log(car);
+        // console.log(car.length);
+        // console.log(car.sort());
+        // console.log(car.pop());
+        // console.log(car);
+        // car.push('swift');
+        // console.log(car);
+        // console.log(car.shift());
+        // console.log(car);
+        // car.unshift('verna');
+        // console.log(car);
+
+        // let honda=['splandor','shine','pulsar'];
+        // let c=car.concat(honda);
+        // console.log(c);
+
+        // date 
+
+        // let date=new Date();
+        // console.log(date);
+        // console.log(date.getFullYear());
+        // console.log(date.getMonth()+1);
+        // console.log(date.getDate());
+        // console.log(date.getDay()+1);
+        // console.log(date.getHours());
+        // console.log(date.getMinutes());
+        // console.log(date.getSeconds());
+        // console.log(date.getMilliseconds());
+
+        // // Math function ..........
+
+        // console.log(Math.PI);
+        // console.log(Math.round(2.6));
+        // console.log(Math.ceil(4.3));
+        // console.log(Math.floor(7.9));
+        // console.log(Math.pow(2,5));
+        // console.log(Math.sqrt(9));
+        // console.log(Math.min(2,3,4,6));
+        // console.log(Math.max(4,5,3,2,));
+        // console.log(Math.floor(Math.random()*10000));
+
+        // // dome ................................................
+        // // ( Document Object model Manipulation )
+
+        // let a=document.getElementsByTagName('h1');
+        // console.log(a[0].innerHTML);
+        // a[0].innerHTML="hello ali";
+
+        // let a=document.getElementById('h1');
+        // console.log(a);
+        // console.log(a.innerHTML);
+        // a.innerHTML="hello saiyad";.
+   </script>
+     <!-- // events ========================================================================
+
+     // 1 ... inner event .......... -->
+<!-- <button onclick="show()">click</button>
+<script>
+    function show() {
+        console.log("events is run");
+        
+    }
+</script> -->
+
+<!-- 2 ....... after targeting events -->
+
+
+<!-- <button id="btn">click</button>
+<script>
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click',show)
+
+    function show() {
+        console.log("mohammad saiyad is create this");
+    }
+</script> -->
+
+<!-- <button id="btn"> click</button>
+<script>
+    let btn=document.getElementById('btn');
+    btn.onclick=show;
+    function show(){
+        console.log("mohammad saiyad");
+    }
+</script>
+     -->
+     <!-- counter ......................................................  -->
+
+     <!-- <style>
+        body{
+            background-color: rgb(200, 191, 191);
+        }
+        #demo{
+            background-color: white;
+            width: 350px;
+            height: 250px;
+            font-size: 13rem;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+     </style>
+     <h1 id="demo">0</h1>
+     <script>
+        let h1=document.getElementById('demo');
+        setInterval(show,1000);
+        let count=0;
+        function show() {
+            count++;
+            h1.innerHTML=count
+        }
+    </script> -->
+
+    <!-- <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <h1 id="a1">0</h1>
+    <script>
+        let a1=document.getElementById('a1');
+        let x;
+        let count=0;
+        function start (){
+            x=setInterval(()=>{
+                count++;
+                a1.innerHTML=count;
+            },1)
+        }
+        function stop(){
+            clearInterval(x);
+        }
+    </script> -->
+
+
+
+    <!-- sincronounce........................................................................ -->
+
+    <!-- <script>
+        function function1() {
+            console.log("function 1 is start");
+            function2();
+            console.log("function 1 is end");
+        }
+        function function2() {
+            console.log("function 1 is under process");
+        }
+        function1();
+    </script> -->
+
+    <!-- a sincronounce ////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- <script>
+        function function1() {
+            console.log("function 1 is start");
+            function2();
+            console.log("function 1 is end");
+        }
+        function function2() {
+            setTimeout(() => {
+                console.log("now function 2 is starting");
+            }, 2000);
+        }
+        function1();
+    </script> -->
+    
+    <!-- server pase hi data levohoy tyare ///////////////////////////////////////////////////////////////// -->
+    <!-- chrom ma run thase nahi .........................................!!!!!!!!!!!!!!!!!!!! -->
+
+    <!-- <script>
+        let load=new XMLHttpRequest();
+        load.open("Get",'1.txt',true );
+        load.onprogress=function(){
+            console.log("data is in progress");
+        }
+        load.onland=function(){
+            console.load(this.responseText);
+        }
+        load.send();
+    </script> -->
+    <script>
+    let load=new XMLHttpRequest();
+    load.open("get",true);
+    load.onprogress=function(){
+        console.log("data is in progress");
+    }
+    load.onload=function(){
+        let data=JSON.parse(this.responseText);
+        console.log(data);
+    }
+    load.send();
+    </script>
+
+
+</body>
+</html>
